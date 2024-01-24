@@ -1,0 +1,148 @@
+body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffd;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.6;
+			background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: rgba(230, 230, 200, 1);
+			box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.25);
+            color: #000;
+            text-align: center;
+            padding: 1em 0;
+            box-sizing: border-box;
+            font-size: 2em;
+            margin-bottom: 20px;
+			
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .site-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .site-card {
+            background-color: rgba(230, 230, 200, 1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            text-decoration: none;
+            color: #111111;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .site-card:hover {
+            transform: scale(1.03);
+			box-shadow: 0 7px 20px 3px rgba(0, 0, 0, 0.2)
+        }
+
+        .site-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .site-info {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .site-link {
+            margin-top: 10px;
+            color: #ffffff;
+            text-decoration: none;
+            background-color: #3498db;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .site-link:hover {
+            background-color: #2c3e50;
+            color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #search-bar {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        #channel-search {
+            padding: 10px;
+            border: 1px;
+            border-radius: 5px;
+            width: 20%;
+            margin-right: 10px;
+            font-size: 16px;
+			background-color: #eee;
+        }
+
+        #channel-search:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        #search-btn,#addchannel-btn {
+            padding: 10px 15px;
+            background-color: #090909;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #search-btn:hover {
+            background-color: #2c3e50;
+        }
+
+        /* Media Query for Small Screens */
+        @media only screen and (max-width: 600px) {
+            .site-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            #channel-search {
+                width: 60%;
+                margin-right: 0;
+            }
+
+            #search-bar {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #channel-search,
+            #search-btn {
+                width: 70%;
+                margin-right: 0;
+            }
+        }
